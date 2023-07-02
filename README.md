@@ -1,11 +1,11 @@
 # _MovieApp_
 
-<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/d1932792-b5a4-4807-929a-99ff8fd63679" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
-<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/9e1d65d3-ad4b-40ca-9fcc-e10d3a566141" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
-<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/7ee8ba4b-2431-406e-aa8f-c8397c569ffb" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
-<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/cb48bc5d-0470-4129-a8d0-48bc17af36d9" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
-<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/6796799c-0f42-4961-8e12-45aaa9606bce" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
-<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/d9edef46-562f-404b-893a-ecda7624fc73" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
+<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/45f6916f-48b5-46e2-80b7-706975ba7aba" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
+<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/15003ddd-890e-4020-8b17-2a125976dd12" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
+<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/51073ff7-d08b-433f-8b4f-52ca1284a94e" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
+<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/9676d1f2-942a-4456-82c9-cf7aa9391b47" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
+<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/01ec5094-0b26-4150-a88e-3d8e9c185603" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
+<img src="https://github.com/bugrahangulmez/movieapp/assets/114365074/fd86e1ab-bbd7-4ccb-a33d-3169e70eef0f" alt="Açıklama" width="250" height="500" style="border-radius: 10px;">
 
 This app is developed by using these technologies:
 
