@@ -26,6 +26,7 @@ const {width, height} = Dimensions.get('window');
 const filmName = 'Film Name Placeholder Takes Longer Than 20 Charachter';
 
 const AllMovies = () => {
+  const [totalResults, setTotalResults] = useState(0);
   const {goBack, navigate, push} = useNavigation<any>();
   const {params} = useRoute<any>();
   const [loading, setLoading] = useState(false);
@@ -45,6 +46,7 @@ const AllMovies = () => {
           page.toString(),
         );
         const dataUpcoming = respUpcoming.results;
+        setTotalResults(respUpcoming.total_results);
         setMovieList(prevState => [...prevState, ...dataUpcoming]);
         setPage(prevState => prevState + 1);
 
@@ -55,6 +57,8 @@ const AllMovies = () => {
           page.toString(),
         );
         const dataTopRated = respTopRated.results;
+        setTotalResults(respTopRated.total_results);
+
         setMovieList(prevState => [...prevState, ...dataTopRated]);
         setPage(prevState => prevState + 1);
 
@@ -65,6 +69,8 @@ const AllMovies = () => {
           page.toString(),
         );
         const dataNowPlaying = respNowPlaying.results;
+        setTotalResults(respNowPlaying.total_results);
+
         setMovieList(prevState => [...prevState, ...dataNowPlaying]);
         setPage(prevState => prevState + 1);
 
@@ -74,6 +80,8 @@ const AllMovies = () => {
         const respPopular: ApiResp = await fetchPopularMovies(page.toString());
         const dataPopular = respPopular.results;
         setMovieList(prevState => [...prevState, ...dataPopular]);
+        setTotalResults(respPopular.total_results);
+
         setPage(prevState => prevState + 1);
 
         setLoading(false);
@@ -171,10 +179,13 @@ const AllMovies = () => {
             </Text>
           </View>
           <View className="mb-16">
+            <Text className="text-neutral-300 mx-6 mt-6">
+              {totalResults} films have found
+            </Text>
             <FlatList
               showsVerticalScrollIndicator={false}
               numColumns={state.numColumns}
-              className="m-auto mt-5 mb-12"
+              className="m-auto mt-2 mb-12"
               data={movieList}
               renderItem={handleMovieList}
               keyExtractor={(item, index) =>

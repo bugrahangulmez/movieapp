@@ -7,6 +7,7 @@ interface InitialState {
   loading: boolean;
   list: Movie[];
   page: number;
+  total_results: number;
 }
 
 const initialState: InitialState = {
@@ -14,6 +15,7 @@ const initialState: InitialState = {
   loading: true,
   list: [],
   page: 1,
+  total_results: 0,
 };
 
 type States = {search: InitialState};
@@ -83,6 +85,7 @@ const searchSlice = createSlice({
     });
     builder.addCase(searchMovie.fulfilled, (state, {payload}) => {
       let data: ApiResp = payload;
+      state.total_results = data.total_results;
       state.list = data.results;
       state.page = state.page + 1;
       state.loading = false;

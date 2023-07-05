@@ -5,31 +5,26 @@ import {
   TouchableOpacity,
   Dimensions,
   StatusBar,
-  TextInput,
   TouchableWithoutFeedback,
   Image,
   FlatList,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {MagnifyingGlassIcon} from 'react-native-heroicons/solid';
+import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {ChevronLeftIcon} from 'react-native-heroicons/solid';
 import {useAppDispatch, useAppSelector} from '../redux/hooks';
-import {
-  reset,
-  searchMovie,
-  setPage,
-  showMoreMovie,
-} from '../redux/features/searchSlice';
+import {reset, showMoreMovie} from '../redux/features/searchSlice';
 import {fallbackMoviePoster, image342} from '../api/moviedb';
 
 const {width, height} = Dimensions.get('window');
 
 const SearchScreenHome = () => {
   const dispatch = useAppDispatch();
-  const {text, list, loading} = useAppSelector(store => store.search);
+  const {text, list, loading, total_results} = useAppSelector(
+    store => store.search,
+  );
 
-  const {goBack, navigate, push} = useNavigation<any>();
+  const {goBack, push} = useNavigation<any>();
 
   let state = {
     numColumns: 2,
@@ -58,7 +53,6 @@ const SearchScreenHome = () => {
   };
 
   const handleShowMore = () => {
-    // dispatch(setPage());
     dispatch(showMoreMovie());
   };
   console.log(list[0]);
@@ -118,6 +112,9 @@ const SearchScreenHome = () => {
                   </Text>
                 </TouchableOpacity>
               </View>
+              <Text className="text-neutral-300 mx-6">
+                {total_results} films have found
+              </Text>
               <FlatList
                 showsVerticalScrollIndicator={false}
                 numColumns={state.numColumns}

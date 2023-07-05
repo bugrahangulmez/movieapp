@@ -20,6 +20,7 @@ import {debounce} from 'lodash';
 const {width, height} = Dimensions.get('window');
 
 const SearchScreen = () => {
+  const [count, setCount] = useState(0);
   const {goBack, navigate, push} = useNavigation<any>();
   const filmName = 'Film Name Placeholder Takes Longer Than 20 Charachter';
 
@@ -62,12 +63,14 @@ const SearchScreen = () => {
     if (typeof value === 'number') {
       setText(value.toString());
       let results: ApiResp = await searchMovie(value.toString());
+      setCount(results.total_results);
       setMovieList(results.results);
       setPage(prevState => prevState + 1);
     } else {
       setText(value);
       let results: ApiResp = await searchMovie(value);
       setMovieList(results.results);
+      setCount(results.total_results);
       setPage(prevState => prevState + 1);
     }
   };
@@ -133,6 +136,9 @@ const SearchScreen = () => {
                   </Text>
                 </TouchableOpacity>
               </View>
+              <Text className="text-neutral-300 mx-6">
+                {count} films have found
+              </Text>
               <FlatList
                 showsVerticalScrollIndicator={false}
                 numColumns={state.numColumns}

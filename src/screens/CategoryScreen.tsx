@@ -22,6 +22,7 @@ import {Loading} from '../components';
 const {width, height} = Dimensions.get('window');
 
 const CategoryScreen = () => {
+  const [totalResults, setTotalResults] = useState(0);
   const {goBack, navigate, push} = useNavigation<any>();
   const {params} = useRoute<any>();
   const [loading, setLoading] = useState(false);
@@ -42,6 +43,7 @@ const CategoryScreen = () => {
         page.toString(),
       );
       setMovieList(prevState => [...prevState, ...respList.results]);
+      setTotalResults(respList.total_results);
       setPage(prevState => prevState + 1);
       setLoading(false);
     })();
@@ -123,7 +125,7 @@ const CategoryScreen = () => {
             <FlatList
               showsVerticalScrollIndicator={false}
               numColumns={state.numColumns}
-              className="m-auto mt-5 mb-12"
+              className="m-auto mt-2 mb-16"
               data={movieList}
               renderItem={handleMovieList}
               keyExtractor={(item, index) =>
@@ -131,7 +133,10 @@ const CategoryScreen = () => {
               }
             />
           </View>
-          <View className="absolute bottom-4 w-screen">
+          <View className="absolute bottom-4 w-screen flex justify-center items-center">
+            <Text className="text-neutral-300 mx-6 my-2">
+              {totalResults} films have found
+            </Text>
             <TouchableOpacity
               onPress={handlePageIncrease}
               className="px-4 py-2 border border-neutral-300 rounded-full w-4/12 m-auto">
