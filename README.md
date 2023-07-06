@@ -32,31 +32,31 @@ In order to use this app follow the these steps.
 You are ready to use "MovieApp" :)
 
 -- PACKAGES --
-yarn add @react-navigation/native
-yarn add react-native-screens react-native-safe-area-context
-yarn add @react-navigation/native-stack
-yarn add @react-navigation/stack
-yarn add react-native-gesture-handler
-yarn add @react-native-masked-view/masked-view
-yarn add @react-navigation/native-stack
-yarn add @react-navigation/drawer
-yarn add react-native-gesture-handler react-native-reanimated
-yarn add @react-navigation/bottom-tabs
-yarn add @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
-yarn add @react-navigation/material-top-tabs react-native-tab-view
-yarn add react-native-pager-view
-yarn add react-native-reanimated
-yarn add nativewind
-yarn add --dev tailwindcss
-yarn add react-native-linear-gradient
-yarn add react-native-heroicons react-native-svg
-npm install --save react-native-snap-carousel
-npm install --save @types/react-native-snap-carousel
-npx tailwindcss init
-yarn add react-native-linear-gradient
-npm install --save react-native-snap-carousel
-npm install --save @types/react-native-snap-carousel
-yarn add react-native-heroicons react-native-svg
-npm install react-native-progress --save
-npm install react-redux
+yarn add @react-navigation/native  
+yarn add react-native-screens react-native-safe-area-context  
+yarn add @react-navigation/native-stack  
+yarn add @react-navigation/stack  
+yarn add react-native-gesture-handler  
+yarn add @react-native-masked-view/masked-view  
+yarn add @react-navigation/native-stack  
+yarn add @react-navigation/drawer  
+yarn add react-native-gesture-handler react-native-reanimated  
+yarn add @react-navigation/bottom-tabs  
+yarn add @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons  
+yarn add @react-navigation/material-top-tabs react-native-tab-view  
+yarn add react-native-pager-view  
+yarn add react-native-reanimated  
+yarn add nativewind  
+yarn add --dev tailwindcss  
+yarn add react-native-linear-gradient  
+yarn add react-native-heroicons react-native-svg  
+npm install --save react-native-snap-carousel  
+npm install --save @types/react-native-snap-carousel  
+npx tailwindcss init  
+yarn add react-native-linear-gradient  
+npm install --save react-native-snap-carousel  
+npm install --save @types/react-native-snap-carousel  
+yarn add react-native-heroicons react-native-svg  
+npm install react-native-progress --save  
+npm install react-redux  
 npm install @reduxjs/toolkit
