@@ -31,7 +31,7 @@ In order to use this app follow the these steps.
 
 You are ready to use "MovieApp" :)
 
--- PACKAGES --
+-- PACKAGES --  
 yarn add @react-navigation/native  
 yarn add react-native-screens react-native-safe-area-context  
 yarn add @react-navigation/native-stack  
